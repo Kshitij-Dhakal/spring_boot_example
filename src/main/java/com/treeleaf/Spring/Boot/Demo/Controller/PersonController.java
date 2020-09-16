@@ -1,5 +1,6 @@
 package com.treeleaf.Spring.Boot.Demo.Controller;
 
+import com.treeleaf.Spring.Boot.Demo.model.Address;
 import com.treeleaf.Spring.Boot.Demo.model.Person;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,6 +19,7 @@ public class PersonController {
         return fakeDatabase;
     }
 
+
     @GetMapping("/person/{id}")
     public Person getById(@PathVariable int id) {
         return fakeDatabase.get(id);
@@ -29,4 +31,22 @@ public class PersonController {
         fakeDatabase.add(person);
         return person;
     }
+    @GetMapping("/address")
+    public List<Address> getAllAddress() {
+        return fakeDatabase;
+    }
+    @GetMapping("/address/{adddress}")
+    public Person getByAddress(@PathVariable String address) {
+        return fakeDatabase.get(id);
+    }
+
+
+    @GetMapping("/address")
+    public Address  save(@RequestBody Address address){
+     address.getAddress(fakeDatabase.size());
+     fakeDatabase.add(address);
+     return address;
+    }
+
+
 }
