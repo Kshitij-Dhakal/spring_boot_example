@@ -22,7 +22,12 @@ public class PersonController {
 
     @GetMapping("/person/{id}")
     public Person getById(@PathVariable int id) {
-        return fakeDatabase.get(id);
+        for (Person person : fakeDatabase) {
+            if (person.getId() == id) {
+                return person;
+            }
+        }
+        return null;
     }
 
     @PostMapping("/person")
@@ -31,21 +36,29 @@ public class PersonController {
         fakeDatabase.add(person);
         return person;
     }
+
     @GetMapping("/address")
     public List<Address> getAllAddress() {
-        return fakeDatabase;
+        List<Address> tempList = new ArrayList<>();
+        for (Person person : fakeDatabase) {
+            if (person.getAddress() != null)
+                tempList.add(person.getAddress());
+        }
+        return tempList;
     }
+
     @GetMapping("/address/{adddress}")
     public Person getByAddress(@PathVariable String address) {
-        return fakeDatabase.get(id);
+//        return fakeDatabase.get(id);
+        return null;
     }
 
-
-    @GetMapping("/address")
-    public Address  save(@RequestBody Address address){
-     address.getAddress(fakeDatabase.size());
-     fakeDatabase.add(address);
-     return address;
+    @PostMapping("/address")
+    public Address save(@RequestBody Address address) {
+//     address.getAddress(fakeDatabase.size());
+//     fakeDatabase.add(address);
+//     return address;
+        return null;
     }
 
 

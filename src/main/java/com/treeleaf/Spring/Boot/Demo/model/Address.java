@@ -2,21 +2,16 @@ package com.treeleaf.Spring.Boot.Demo.model;
 
 
 public class Address {
-    String address;
     String city;
     String state;
     String country;
     int zipCode;
 
-    public Address(String address, String city, String state, String country, int zipCode) {
+    public Address(String city, String state, String country, int zipCode) {
         this.city = city;
         this.state = state;
         this.country = country;
         this.zipCode = zipCode;
-    }
-
-    public String getAddress() {
-        return address;
     }
 
     public String getCity() {
@@ -35,10 +30,6 @@ public class Address {
         return zipCode;
     }
 
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
 
     public void setCity(String city) {
         this.city = city;
