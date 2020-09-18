@@ -1,23 +1,29 @@
 package com.treeleaf.Spring.Boot.Demo.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Person {
-    int id;
+    @Id
+    String id;
     String name;
     int age;
-    Address address;
 
-    public Person(int id, String name, int age, Address address) {
+    public Person() {
+    }
+
+    public Person(String id, String name, int age) {
         this.id = id;
         this.name = name;
         this.age = age;
-        this.address = address;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -35,13 +41,5 @@ public class Person {
 
     public void setAge(int age) {
         this.age = age;
-    }
-
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
     }
 }
