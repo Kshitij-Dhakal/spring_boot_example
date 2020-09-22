@@ -1,7 +1,7 @@
 package com.treeleaf.Spring.Boot.Demo.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Person {
@@ -9,6 +9,16 @@ public class Person {
     String id;
     String name;
     int age;
+
+    //OneToOne
+    Address address;
+
+    //OneToMany / ManyToOne
+    List<String> phoneNumbers;
+
+    //ManyToMany
+    List<String> subjects;
+
 
     public Person() {
     }
