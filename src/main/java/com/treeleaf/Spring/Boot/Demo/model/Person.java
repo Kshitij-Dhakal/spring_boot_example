@@ -4,6 +4,9 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
+
+//@Table(name="Person")
+
 public class Person {
     @Id
     String id;
@@ -19,6 +22,7 @@ public class Person {
     //ManyToMany
     List<String> subjects;
 
+    //@OneToMany(mappedBy = "Person", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 
     public Person() {
     }

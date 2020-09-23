@@ -1,11 +1,16 @@
 package com.treeleaf.Spring.Boot.Demo.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="Address")
 public class Address {
     String city;
     String state;
     String country;
     int zipCode;
+
 
     public Address(String city, String state, String country, int zipCode) {
         this.city = city;
