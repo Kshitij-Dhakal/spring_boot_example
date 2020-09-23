@@ -1,12 +1,13 @@
 package com.treeleaf.Spring.Boot.Demo.model;
 
-import javax.persistence.*;
+import lombok.Data;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.List;
 
 @Entity
-
-//@Table(name="Person")
-
+@Data
 public class Person {
     @Id
     String id;
@@ -23,37 +24,4 @@ public class Person {
     List<String> subjects;
 
     //@OneToMany(mappedBy = "Person", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-
-    public Person() {
-    }
-
-    public Person(String id, String name, int age) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
 }

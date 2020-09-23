@@ -13,12 +13,14 @@ repositories {
 }
 
 dependencies {
+    // hibernate + jpa
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     runtimeOnly 'com.h2database:h2'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
+    compile 'org.projectlombok:lombok:1.18.12'
 }
 
 test {
