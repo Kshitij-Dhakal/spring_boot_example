@@ -18,7 +18,7 @@ public class Person {
     Address address;
 
     //OneToMany / ManyToOne
-    List<String> phoneNumbers;
+    List<String> PhoneNumbers;
 
     //ManyToMany
     List<String> subjects;
