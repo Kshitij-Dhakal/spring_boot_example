@@ -18,9 +18,7 @@ public class PersonService {
     public PersonService(PersonRepository repository) {
         this.repository = repository;
     }
-
     public Person save(Person person) {
-        person.setId(UUID.randomUUID().toString());
         return repository.save(person);
     }
 
