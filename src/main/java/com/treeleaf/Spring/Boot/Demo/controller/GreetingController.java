@@ -1,4 +1,4 @@
-package com.treeleaf.Spring.Boot.Demo.Controller;
+package com.treeleaf.Spring.Boot.Demo.controller;
 
 import com.treeleaf.Spring.Boot.Demo.model.Greeting;
 import org.springframework.web.bind.annotation.GetMapping;

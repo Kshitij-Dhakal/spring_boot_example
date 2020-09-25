@@ -6,22 +6,12 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.List;
 
-@Entity
 @Data
+@Entity
 public class Person {
     @Id
     String id;
     String name;
     int age;
-
-    //OneToOne
-    Address address;
-
-    //OneToMany / ManyToOne
-    List<String> PhoneNumbers;
-
-    //ManyToMany
-    List<String> subjects;
-
     //@OneToMany(mappedBy = "Person", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 }
