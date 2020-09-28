@@ -1,10 +1,9 @@
-package com.treeleaf.Spring.Boot.Demo.model;
+package com.treeleaf.spring.boot.demo.model;
 
 import lombok.Data;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.util.List;
 
 @Data
 @Entity

@@ -1,6 +1,6 @@
-package com.treeleaf.Spring.Boot.Demo.controller;
+package com.treeleaf.spring.boot.demo.controller;
 
-import com.treeleaf.Spring.Boot.Demo.model.Greeting;
+import com.treeleaf.spring.boot.demo.model.Greeting;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;

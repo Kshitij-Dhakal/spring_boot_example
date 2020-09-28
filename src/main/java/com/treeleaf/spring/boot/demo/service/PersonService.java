@@ -1,7 +1,7 @@
-package com.treeleaf.Spring.Boot.Demo.service;
+package com.treeleaf.spring.boot.demo.service;
 
-import com.treeleaf.Spring.Boot.Demo.model.Person;
-import com.treeleaf.Spring.Boot.Demo.repo.PersonRepository;
+import com.treeleaf.spring.boot.demo.model.Person;
+import com.treeleaf.spring.boot.demo.repo.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

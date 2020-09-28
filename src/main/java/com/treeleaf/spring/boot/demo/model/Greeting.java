@@ -1,4 +1,4 @@
-package com.treeleaf.Spring.Boot.Demo.model;
+package com.treeleaf.spring.boot.demo.model;
 
 public class Greeting {
     long time;
